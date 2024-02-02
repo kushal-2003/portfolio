@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage Design</title>
+</head>
+<style>
+   * {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(IMG_1642.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.menu {
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover {
+    color: #1d1b1a;
+}
+
+.image-container {
+    background-size: cover;
+    background-position: center;
+    color: rgb(248, 246, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* You can set the height as per your requirement */
+    text-align: right;
+    font-size: 24px;
+    font-family: 'lucida handwriting', cursive;
+    right: 0; /* Adjusted the right property */
+}
+
+.text-over-image {
+    position: absolute;
+    top: 40%;
+    right: 20%;
+    transform: translate(50%, -50%);
+    color: white;
+    font-size: 30px;
+    text-align: right;
+    animation: slide-up 2s forwards;
+}
+
+.search-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px; /* Make it oval-shaped */
+    margin-right: 10px;
+    width: 150px; /* Adjust the width as needed */
+}
+
+.search-button {
+    padding: 10px;
+    border: none;
+    border-radius: 20px; /* Make it oval-shaped */
+    background-color: #1d1b1a; /* Button color */
+    color: #fff; /* Text color */
+    cursor: pointer;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+</style>
+<script>
+    let openedWindow;
+
+    function openNewWindow(url) {
+        openedWindow = window.open(url, '_blank');
+    }
+</script>
+<body>
+    <div class="main">
+        <div class="menu">
+            <ul>
+                <li><a onclick="openNewWindow('kushalnew.html')" style="cursor:pointer;">HOME</a></li>
+                <li><a onclick="openNewWindow('about.html')" style="cursor:pointer;">ABOUT</a></li>
+                <li><a onclick="openNewWindow('details.html')" style="cursor:pointer;">DETAILS</a></li>
+                <li><a onclick="openNewWindow('contact.html')" style="cursor:pointer;">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button class="search-button" type="button">Search</button>
+        </div>
+        <div class="image-container">
+            <div class="text-over-image">
+                <p>"None can destroy iron,
+                 but its own rust can! Likewise,</p>
+                <p>none can destroy a person,
+                 but their own mindset can."</p>
+                 <p>- Sir Ratan Tata</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
